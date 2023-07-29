@@ -1,0 +1,22 @@
+.btnSignin {
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    /* margin: auto 1rem; */
+    border: none;
+    background-color: transparent; /* transparent làm màu nền trở nên trong suốt tức là không có màu nền*/
+}
+.btnSignin img {
+    margin: 0;
+    width:auto;
+    height: 30px;
+}
+.btnSignin img:hover {
+    opacity: 0.5;
+  }
+.container {
+    text-align: center;
+}
+.container h1 {
+    color: #c8c8c8;
+}

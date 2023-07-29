@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  background-color: #1f1f1f;
+  color: #bababa;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 500px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 15px 15px 15px 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.contentName {
+  margin: 0;
+  font-weight: bold;
+}
+.contentText {
+  margin: 0;
+  margin-top: 10px;
+}
+.right {
+    margin-left: auto;
+    background-color: #7C01F6;
+    color: #fff;
+  border-radius: 15px 15px 0px 15px;
+
+}

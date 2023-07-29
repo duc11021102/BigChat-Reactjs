@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 4rem;
+  background-color: #4D4C4E;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  color: #C8C8C8;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.title {
+  margin: auto 1.5rem;
+}
+.btnSignin {
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+  margin: auto 1rem;
+  border: none;
+  background-color: transparent; /* transparent làm màu nền trở nên trong suốt tức là không có màu nền*/
+}
+.btnSignin img {
+  margin: 0;
+  width: auto;
+  height: 30px;
+}
+.btnSignin img:hover {
+  opacity: 0.5;
+}
+
+
+.btnSignout {
+    background-color: #7C01F6;
+    padding: 10px 12px;
+    margin: auto 1rem;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #fff;
+    border: 0px solid #ccc;
+}
+.btnSignout:hover {
+  background-color: #6903ce;
+}
