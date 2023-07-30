@@ -36,7 +36,7 @@ const SendMessage = ({scroll}) => {
         }}
         value={message}
         className={classes.input}
-        placeholder="Aa"
+        placeholder="Type your message"
       ></input>
       <button type="submit">Send</button>
     </form>

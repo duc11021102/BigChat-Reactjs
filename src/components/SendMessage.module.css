@@ -16,6 +16,8 @@
   border: 0px solid #ccc;
   color: #ccc;
   outline: none;
+  font-family: 'Roboto', sans-serif;
+
 }
 .sendMessage input:focus {
     border: 0px solid  #ccc;
@@ -29,6 +31,7 @@
   color: #fff;
   border: 0px solid #ccc;
   outline: none;
+  font-family: 'Roboto', sans-serif;
 }
 .sendMessage button:hover {
     background-color: #6903ce;

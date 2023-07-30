@@ -10,7 +10,6 @@
   z-index: 1;
   color: #C8C8C8;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
 }
 .title {
   margin: auto 1.5rem;
@@ -41,6 +40,7 @@
     border-radius: 5px;
     color: #fff;
     border: 0px solid #ccc;
+    font-family: 'Roboto', sans-serif;
 }
 .btnSignout:hover {
   background-color: #6903ce;
