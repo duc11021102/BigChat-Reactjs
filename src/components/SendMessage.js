@@ -2,6 +2,8 @@ import classes from "./SendMessage.module.css";
 import React, { useState } from "react";
 import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+// hàm addDoc cho phép thêm dữ liệu vào collection
+// serverTimestamp đại diện cho mộc thời gian hiện tại của máy chủ 
 const SendMessage = ({scroll}) => {
   const [message, setMessage] = useState("");
   const submitHandler = async (event) => {
@@ -11,7 +13,10 @@ const SendMessage = ({scroll}) => {
       return;
     }
     const { uid, displayName, photoURL } = auth.currentUser;
+    //auth.currentUser truy cập thông tin của người dùng hiện tại 
+    // uid là user id
     console.log(auth.currentUser);
+    // thêm một tài liệu mới vào collection
     const docRef = await addDoc(collection(db, "messages"), {
       text: message || null,
       name: displayName || null,
@@ -21,6 +26,7 @@ const SendMessage = ({scroll}) => {
     });
     console.log("Document written with ID: ", docRef.id);
     setMessage("");
+    // sau khi gửi màn hình sẽ dịch xuống đoạn tin nhắn đc gửi đi 
     scroll.current.scrollIntoView({ behavior: "smooth" });
   };
 

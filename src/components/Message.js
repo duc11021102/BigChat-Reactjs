@@ -1,18 +1,20 @@
 import classes from "./Message.module.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
-const Message = ({ message }) => {
+const Message = (props) => {
   const [user] = useAuthState(auth);
 
+
+  // nếu mình đang đăng nhập, nếu là tin nhắn của mình nhắn thì sẽ xuất hiện ở bên phải còn người khác sẽ ở bên trái màn hình
   const classesUser = `${classes.container} ${
-    message.uid === user.uid ? classes.right : null
+    props.message.uid === user.uid ? classes.right : null
   }`;
   return (
     <div className={classesUser}>
-      <img src={message.avatar} alt="avatar"></img>
+      <img src={props.message.avatar} alt="avatar"></img>
       <div className={classes.content}>
-        <p className={classes.contentName}>{message.name}</p>
-        <p className={classes.contentText}>{message.text}</p>
+        <p className={classes.contentName}>{props.message.name}</p>
+        <p className={classes.contentText}>{props.message.text}</p>
       </div>
     </div>
   );

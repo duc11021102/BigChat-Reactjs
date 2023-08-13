@@ -5,13 +5,15 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
 const NavBar = () => {
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);// trả về thông tin người dùng HIỆN TẠI đang đăng nhập 
 
   const signOut = () => {
-    auth.signOut();
+    auth.signOut(); // đăng xuất
   };
   const SignIn = () => {
+    // tạo một thẻ hiện của GoogleAuthProvider
     const provider = new GoogleAuthProvider();
+    // Khi người dùng chọn xác thực qua Google, chuyển hướng đến giao diện xác thực
     signInWithRedirect(auth, provider);
   };
   return (
